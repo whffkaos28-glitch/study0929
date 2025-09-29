@@ -36,6 +36,10 @@ public class StreamMain3 {
         var partitioningByMap = cExams.stream().collect(Collectors.partitioningBy(exam->exam.score<=20, Collectors.mapping(exam->exam.name, Collectors.toList())));
         System.out.println(partitioningByMap);
 
+        //summerizingInt 배열의 요약본을 만들어줌
+        
+        var summerint=names.stream().collect(Collectors.summarizingInt(String::length));
+        System.out.println(summerint);
 
 
     }
